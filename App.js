@@ -1,9 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, View } from 'react-native';
-import Name from "./components/Name"
-import Input from "./components/Input"
-import List from "./components/List"
-import List2 from "./components/List2"
+import Name from "./test/Name"
+import Input from "./test/Input"
+import List from "./test/List"
+import List2 from "./test/List2"
 
 const App = () => {
 
