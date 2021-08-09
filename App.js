@@ -1,40 +1,35 @@
 import React from 'react';
-import {StyleSheet, Text, View } from 'react-native';
-import Name from "./components/Name"
-import Input from "./components/Input"
-import List from "./components/List"
-import List2 from "./components/List2"
+import {StyleSheet, View , TouchableWithoutFeedback , Keyboard } from 'react-native';
+import Header from './Components/Header';
+import Lister from './Components/Lister';
+
 
 const App = () => {
 
   return (
+    <TouchableWithoutFeedback 
+    onPress= {() => Keyboard.dismiss()}
+    >
     <View style={styles.container} >
-    {/* <Name /> */}
-    {/* <Input /> */}
-    {/* <List /> */}
-    {/* <List2 /> */}
+        <Header />
+        <View style={styles.content} >
+          <Lister />
+        </View>     
     </View>
+    </TouchableWithoutFeedback>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
-    // alignItems: 'flex-start',
-    // justifyContent: 'center',
-    margin : 10,
-    padding: 10
+    flex:1
   },
-  body :{
-    backgroundColor : 'pink',
-    padding: 30,
-    margin: 20,
-    borderRadius : 15,
-   },
-   button : {
-     marginTop : 20,
-   }
+  content :{
+    padding : 40,
+    flex : 1,
+    marginBottom : 1
+  }
 });
 
 export default App;
