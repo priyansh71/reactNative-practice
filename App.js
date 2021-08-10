@@ -1,18 +1,27 @@
 import React from 'react';
-import {StyleSheet, View } from 'react-native';
-
+import { useFonts } from 'expo-font';
+import AppLoading from 'expo-app-loading';
+import Navigator from './routes/Homestack'
 
 const App = () => {
 
-  return (
-    <View>
+  let [fontsLoaded] = useFonts({
+    'regular' : require('./assets/fonts/regular.ttf'),
+    'semibold' : require('./assets/fonts/semibold.ttf'),
+    'light' : require('./assets/fonts/light.ttf')
+  });
 
-    </View>
-  );
-}
+  if(!fontsLoaded) {
+    return(
+      <AppLoading/>
+      )}
 
-const styles = StyleSheet.create({
+  else{
+    return (
+      <Navigator />
+    )
+}}
 
-});
+
 
 export default App;
