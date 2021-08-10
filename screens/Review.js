@@ -18,12 +18,12 @@ const Review = (props) => {
       <Text style={styles.headerText}>{props.navigation.getParam("title")}</Text>
       <Text style={styles.title}>Comments :</Text>
       <Text style={styles.paragraph}>{props.navigation.getParam("body")}</Text>
-      <Text style={styles.title}>Rating :</Text> 
-      <Text>
+      <Text style={styles.title}>Rating :</Text>
+      <View  style={styles.rating}>
       {
-        fields.map((i,j) => <AntDesign name="star" size={20} color="black" key={j}/>)
+        fields.map((i,j) => <AntDesign name="star" size={24} color="black" key={j}/>)
       }
-      </Text>
+      </View>
       </Card>
     </View>
   );
