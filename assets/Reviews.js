@@ -6,13 +6,13 @@ const Reviews = [
       key: "1",
     },
     {
-      title: "TailwindCSS",
+      title: "TailwindCss",
       rating: 5,
       body: "Lots of customization is enabled but even building the smallest components takes a lot of time. Brilliant framework overall.",
       key: "2",
     },
     {
-      title: 'BulmaCSS',
+      title: 'BulmaCss',
       rating: 3,
       body: "Really light and works amazing in small projects. But it is toll flexible and solving issues is difficult sometimes.",
       key: "3",
