@@ -1,5 +1,8 @@
 import React, {useState} from "react";
 import { StyleSheet, Text, View, TextInput, Button } from "react-native";
+import { Entypo } from '@expo/vector-icons';
+import AppLoading from 'expo-app-loading';
+import { useFonts } from 'expo-font';
 
 const CreateTodo = (props) =>{
 
@@ -9,6 +12,15 @@ const CreateTodo = (props) =>{
         setText(value)
     }
 
+    let [fontsLoaded] = useFonts({
+        'Font': require('../assets/Architects_Daughter/font.ttf'),
+      });
+    
+      if (!fontsLoaded) {
+        return <AppLoading />;
+      }
+      else{
+
     return(
         <View>
             <TextInput
@@ -17,17 +29,12 @@ const CreateTodo = (props) =>{
                 style={styles.input}
              />
              <View style={styles.button}>
-             <Button
-                onPress={() => {
+                <Entypo name="add-to-list" size={30} color='#F5116E' onPress={() => {
                     props.submitTodo(text)
-                    }}
-                title='Add todo'
-                color='#F5116E'
-                
-                />
+                    }} />
             </View>
         </View>
-    )
+    )}
 }
 
 
@@ -35,14 +42,17 @@ const styles = StyleSheet.create({
     input :{
         marginBottom : 19,
         paddingHorizontal : 8,
-        paddingVertical : 6,
+        paddingVertical : 8,
         borderBottomColor : '#111',
-        borderBottomWidth : 2
+        borderBottomWidth : 2,
+        fontFamily : 'Font',
+        fontWeight: '500',
+        fontSize : 17
     },
     button :{
-        width : 200,
-        marginLeft : 60,
+        marginRight : 5,
         marginVertical : 10,
+        flexDirection : "row-reverse"
     }
   });
   

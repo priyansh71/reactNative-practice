@@ -9,9 +9,8 @@ const Lister = () => {
   const [todos, setTodos] = useState([
     { text: "Complete CS253", key: "1" },
     { text: "Start React-Native", key: "2" },
-    { text: "Start Competitive Coding", key: "3" },
-    { text: "Watch Beware the Batman", key: "4" },
-    { text: "Make the Core-Project", key: "5" },
+    { text: "Watch Beware the Batman", key: "3" },
+    { text: "Make the Core-Project", key: "4" },
   ]);
 
   const presshandle = (key) => {
