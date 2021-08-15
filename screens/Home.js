@@ -1,11 +1,11 @@
 /** @format */
 
-import React, { useState } from "react";
-import { View, Text, FlatList, TouchableOpacity, Modal, TouchableWithoutFeedback ,Keyboard } from "react-native";
-import Card from "../shared/Card";
+import React, { useState ,useEffect } from "react";
+import { View, Text, FlatList, TouchableOpacity, Modal, TouchableWithoutFeedback, Keyboard } from "react-native";
+import { MaterialIcons } from "@expo/vector-icons";
+import Card from "../components/Card";
 import Reviews from "../assets/Reviews";
 import styles from "../styles/styles";
-import { MaterialIcons } from "@expo/vector-icons";
 import Form from "./Form";
 
 const Home = (props) => {
@@ -15,28 +15,29 @@ const Home = (props) => {
   const addreview = (review) => {
     review.key = Math.random().toString()
     setReviews((prev) => {
-      return(
-        [ review , ...prev ]
+      return (
+        [review, ...prev]
       )
     })
-
-    setModal(false)
   }
+  useEffect(() => {
+    setModal(false)
+  }, [reviews])
 
   return (
     <View style={styles.container}>
       <Modal visible={modal} animationType="slide">
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss} >
-        <View style={styles.modalContent}>
-          <MaterialIcons
-            name="close"
-            size={24}
-            color="black"
-            style={{ ...styles.toggle, ...styles.close }}
-            onPress={() => setModal(false)}
-          />
-          <Form add={addreview} />
-        </View>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss} >
+          <View style={styles.modalContent}>
+            <MaterialIcons
+              name="close"
+              size={24}
+              color="#111"
+              style={{ ...styles.toggle, ...styles.close }}
+              onPress={() => setModal(false)}
+            />
+            <Form add={addreview} />
+          </View>
         </TouchableWithoutFeedback>
       </Modal>
 

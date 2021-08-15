@@ -27,13 +27,19 @@ framework : {
       fontFamily : 'light',
       fontSize: 17
   },
+  error:{
+    fontFamily : 'regular',
+    fontSize: 15,
+    marginVertical: 4,
+    textAlign: 'center',
+    color: 'crimson'
+  },
   header :{
     width : '100%',
     height : '100%', //of deafult stack header
     flexDirection : 'row',
     alignItems : 'center',
     justifyContent : 'center',
-    // margin : 0
   },
   headerText :{
     fontWeight: '700',
@@ -67,16 +73,18 @@ framework : {
     marginTop: 12
   },
   toggle :{
-    marginBottom : 6,
+    marginBottom : 1,
     borderWidth : 1,
-    borderColor : "#f2f2f2",
-    borderRadius : 10,
+    borderColor : "#333333",
+    borderRadius : 7,
     alignSelf : 'center',
-    padding : 12
+    padding : 12,
+    marginTop: 6,
+    backgroundColor : '#f6f6f6'
   },
   close : {
     marginBottom : 0,
-    marginTop : 10,
+    marginTop : 20,
   },
   modalContent : {
     flex : 1,

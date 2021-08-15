@@ -3,14 +3,14 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
 import About from "../screens/About";
-import Header from "../shared/Header";
+import Header from "../components/Header";
 
 const screens = {
   AboutScreen: {
     screen: About,
     navigationOptions: (props) => {
       return {
-        headerTitle: () => <Header navigation={props.navigation} title="About StyleZone." />,
+        headerTitle: () => <Header navigation={props.navigation} title="About" />,
       };
     },
   },

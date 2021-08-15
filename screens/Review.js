@@ -4,7 +4,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import styles from "../styles/styles";
 import { AntDesign } from '@expo/vector-icons';
-import Card from "../shared/Card";
+import Card from "../components/Card";
 
 const Review = (props) => {
   const fields = [];
@@ -16,8 +16,8 @@ const Review = (props) => {
     <View style={styles.container}>
     <Card>
       <Text style={styles.headerText}>{props.navigation.getParam("title")}</Text>
-      <Text style={styles.title}>Comments :</Text>
-      <Text style={styles.paragraph}>{props.navigation.getParam("body")}</Text>
+      <Text style={styles.title}>Review :</Text>
+      <Text style={styles.paragraph}>{props.navigation.getParam("review")}</Text>
       <Text style={styles.title}>Rating :</Text>
       <View  style={styles.rating}>
       {

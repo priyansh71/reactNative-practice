@@ -4,11 +4,11 @@ import Homestack from "./Homestack"
 import Aboutstack from "./Aboutstack"
 
 const screens = {
-    Home : {
-        screen : Homestack
+    Home: {
+        screen: Homestack
     },
-    About : {
-        screen : Aboutstack
+    About: {
+        screen: Aboutstack
     }
 }
 

@@ -4,7 +4,7 @@ import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
 import Home from "../screens/Home";
 import Review from "../screens/Review";
-import Header from "../shared/Header";
+import Header from "../components/Header";
 
 const screens = {
   HomeScreen: {
