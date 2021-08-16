@@ -1,28 +1,25 @@
 const Reviews = [
     {
-      title: "Bootstrap",
-      rating: 4,
-      review: "Too much forced similar-looking components. Customization is difficult. But it is rigid.",
+      title: "The Social Network",
+      rating: 8,
+      review: "Perfect story and an absolute must watch movie for anyone and everyone who wants to know about Zuckerberg. Amazing acting from Jesse Eisenberg.",
+      author : "Priyansh",
       key: "1",
     },
     {
-      title: "TailwindCss",
-      rating: 5,
-      review: "Lots of customization is enabled but even building the smallest components takes a lot of time. Brilliant framework overall.",
+      title: "The Dark Knight",
+      rating: 10,
+      review: "One of the masterpieces, 10/10 character play in Joker, amazing plot and really all about what supervillians are in the Batman Story.",
+      author : "Priyansh",
       key: "2",
     },
     {
-      title: 'BulmaCss',
-      rating: 3,
-      review: "Really light and works amazing in small projects. But it is toll flexible and solving issues is difficult sometimes.",
+      title: '1917',
+      rating: 9,
+      review: "One of the core movies about defeat, conflicts, hardships, friendship and most importantly bravery during times of war and what showing up for your country when it really matters means.",
+      author : "Priyansh",
       key: "3",
     },
-    {
-      title: 'MaterialUI',
-      rating: 5,
-      review: "One of the best styling framework which comes along with animated icons, and a lot of pre-built react components ready for use. Really Customizable.",
-      key: "4",
-    }
   ]
 
   export default Reviews;

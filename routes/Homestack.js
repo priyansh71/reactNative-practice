@@ -11,7 +11,7 @@ const screens = {
     screen: Home,
     navigationOptions:  (props) => {
       return {
-        headerTitle : () => <Header navigation={props.navigation} title="StyleZone." />
+        headerTitle : () => <Header navigation={props.navigation} title="MovieZone." />
 
         }
       }

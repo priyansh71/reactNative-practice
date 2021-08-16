@@ -9,9 +9,10 @@ const styles = StyleSheet.create({
 },
 framework : {
   fontFamily : 'semibold',
-    fontSize : 20,
+    fontSize :20,
     color : '#333',
     marginVertical : 2,
+    fontWeight : "200"
 },
   title :{
     fontFamily : 'semibold',
@@ -23,14 +24,15 @@ framework : {
     borderTopColor: '#eee',
   },
   paragraph : {
-      marginVertical : 15,
+      marginVertical : 10,
       fontFamily : 'light',
-      fontSize: 17
+      fontSize: 16,
+      color : "#333333"
   },
   error:{
     fontFamily : 'regular',
     fontSize: 15,
-    marginVertical: 4,
+    marginVertical: 2,
     textAlign: 'center',
     color: 'crimson'
   },
@@ -42,10 +44,18 @@ framework : {
     justifyContent : 'center',
   },
   headerText :{
-    fontWeight: '700',
+    fontWeight: '500',
     letterSpacing : 0.3,
     color : "#333",
-    fontSize : 24
+    fontSize : 20,
+    textAlign : 'center'
+  },
+  movieTitle:{
+    fontWeight: '700',
+    letterSpacing : 0.2,
+    color : "#450853",
+    fontSize : 22,
+    textAlign : 'center'
   },
   icon : {
     position : 'absolute',
@@ -73,12 +83,12 @@ framework : {
     marginTop: 12
   },
   toggle :{
-    marginBottom : 1,
+    marginBottom : 4,
     borderWidth : 1,
     borderColor : "#333333",
     borderRadius : 7,
     alignSelf : 'center',
-    padding : 12,
+    padding : 10,
     marginTop: 6,
     backgroundColor : '#f6f6f6'
   },
