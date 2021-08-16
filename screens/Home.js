@@ -7,21 +7,23 @@ import Card from "../components/Card";
 import Reviews from "../assets/Reviews";
 import styles from "../styles/styles";
 import Form from "./Form";
+import _ from "lodash";
 
 const Home = (props) => {
   const [reviews, setReviews] = useState(Reviews);
   const [modal, setModal] = useState(false);
 
   const addreview = (review) => {
-    review.key = Math.random().toString()
     setReviews((prev) => {
       return (
         [review, ...prev]
       )
     })
   }
+  
   useEffect(() => {
     setModal(false)
+    
   }, [reviews])
 
   return (
@@ -43,7 +45,7 @@ const Home = (props) => {
 
       <MaterialIcons
         name="playlist-add"
-        size={30}
+        size={34}
         color="black"
         style={styles.toggle}
         onPress={() => setModal(true)}
